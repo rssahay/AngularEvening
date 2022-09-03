@@ -1,0 +1,38 @@
+
+<!-- <app-demo1></app-demo1> -->
+<div>
+    <!-- this is my first component,  Learning Angular -->
+    {{message}}
+
+    {{showDisplayMessage}}
+</div>
+
+
+<div>
+    The sum of two numbers are {{result}}
+
+</div>
+
+
+<div>
+    Person first Name {{person[0].name}}
+    Location  {{person[0].location}}
+</div>
+
+<button (click)="tooglebutton()"  [style.background-color] ="buttoncolor" > button 1</button>
+
+<button  [disabled]="showbutton"  [style]="primarybutton"> button 2</button>
+
+
+
+<button [disabled]="showbutton" id="example1" (click)="submitForm($event)" value="addclick"> Click </button>
+
+<button (click)="sum()">calculate sum</button>  {{result}}
+
+{{buttonmessage}}
+
+
+<!-- <img  src = "assets/Images/{{imageurl}}"> -->
+
+
+

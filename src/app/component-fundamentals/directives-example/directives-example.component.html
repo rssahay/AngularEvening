@@ -1,0 +1,115 @@
+<!-- <p>directives-example works! hhhhhhh</p>
+
+
+
+
+
+
+<div *ngIf="friday ; else elseblock ">
+    <span></span>
+  Today is friday
+  </div>
+  
+  <ng-template #elseblock>
+    <div >
+      today is not friday
+    </div>
+  </ng-template> 
+
+
+NgForm
+   -->
+<!-- 
+   <div *ngFor="let item of studentDetails; index as i;first as isFirst;last as islast">
+    <li>
+        {{i}}  {{item.Firstname}} <span *ngIf="isFirst"> 1st student</span> <span *ngIf="islast"> last student</span>
+    </li>
+
+   </div> -->
+
+
+
+<div *ngIf="daycheck then thenBlock ; else elseblock">
+    Today is friday sdfsggfakgaegme
+    <span>Hello</span>
+</div>
+<ng-template #thenBlock>
+    <div>TOday is also weekend</div>
+</ng-template>
+
+<ng-template #elseblock>
+    <div>
+        today is not friday
+    </div>
+</ng-template>
+
+<!-- 
+<div *ngFor="let student of studentDetails; index as i">
+    <li>{{i+1}} - {{student.Firstname}} {{student.lastname}} </li>
+    <span>Hello form inside for of</span>
+
+</div> -->
+
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">lastname</th>
+            <th scope="col">address</th>
+            <th scope="col">mobilenumber</th>
+            <th scope="col"> #</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of studentDetails; index as r; first as isFirst; last as islast">
+            <td>{{r+1}}</td>
+            <td>{{student.Firstname}}</td>
+            <td>{{student.lastname}}</td>
+            <td>{{student.address}}</td>
+            <td>{{student.mobilenumber}}</td>
+            <td><span *ngIf="isFirst"> First Record </span>
+            <span *ngIf="islast"> Last record display</span>
+            </td>
+            <td>
+                <button (click) ="removeRecord(r)">Remove record</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button  (click)="addrecords()"> Add record</button>
+
+
+<br>
+
+<select [(ngModel)]="selectedValue">
+    <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>
+</select>
+<button (click)="cases('One')"> One</button>
+<button (click)="cases('Two')">Two</button>
+<button (click)="cases('Three')">Three</button>
+
+<div class='row' [ngSwitch]="selectedValue">
+    <div *ngSwitchCase="'One'">One is Pressed</div>
+    <div *ngSwitchCase="'Two'">Two is Selected</div>
+    <div *ngSwitchDefault>Default Option</div>
+</div>
+
+
+
+
+<!-- 
+<form  #loginForm="ngForm" (ngSubmit)="onSubmitDetails(loginForm)"  >
+<label>Username</label>
+<input type="text" id="username"  name="username" ngModel placeholder="username"> <br>
+
+<label>Password</label>
+<input type="text" name="password"  ngModel placeholder="Password">
+
+<button type="submit">Submit</button>
+
+</form>
+   Value entered{{loginForm.value.password}} -->

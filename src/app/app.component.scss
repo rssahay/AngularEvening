@@ -1,0 +1,277 @@
+.test{
+    background-color: rgb(207, 224, 47);
+    font-size: 25px;
+}
+
+
+.highlighter{
+    background-color: rgb(226, 43, 67);
+}
+
+$bodycolor : red;
+#unique{
+    color: $bodycolor;
+}
+
+#common{
+    color: chartreuse;
+}
+
+
+
+.paraEx{
+    color: rgb(108, 30, 210);
+  background-color: aqua;
+}
+
+#imageimport1{
+    background-image: url('../assets/Images/happy.jpg');
+   
+}
+
+
+p.none{
+    border-style: none;
+}
+
+p.dotted {
+    border-style: dotted;
+}
+
+#spanid{
+   // background-color: blueviolet;
+   color: aqua;
+}
+
+.classSelector{
+  //  border-style: solid;
+    background-color: aquamarine;
+  //  border-width: 10px;
+   // border-color: cadetblue;
+    border: 10px solid cadetblue;
+}
+
+.learning{
+   // background-color: brown;
+   color: cadetblue;
+}
+.similar{
+    color: aqua;
+}
+
+// h1.similar{
+//     border-style: dashed;
+// }
+
+// h1.similar{
+//     color: burlywood;
+//     background-color: brown;
+// }
+
+//group  the tags
+h1.similar,h2,h3,span{
+    color: chocolate;
+    //border-style: dashed;
+
+}
+
+// *{
+//     font-size: 20px;
+//     color: blue ;
+// }
+
+// p{
+//     color: cadetblue;
+// }
+
+// span{
+//     background-color: aquamarine;
+// }
+
+#two {
+   // border-radius: 25% 10%;
+  // border-top-left-radius: 25%;
+    background: orange;
+    // border-top-right-radius: 40%;
+    // border-bottom-right-radius: 40%;
+    border-radius: 20%  10% 30% 40%;
+    }
+    
+#imageexample{
+   float: right;
+    height: 40%;
+    width: 300px;
+    opacity: 0.1
+}
+
+.buttonView{
+    background-color: aqua;
+    border: 5px solid brown ;
+    color: blue;
+    border-radius: 20%;
+}
+
+.cancel{
+// margin-left: 20px;
+// margin-top: 25px;
+margin: 25px 15px  15px;
+padding: 20px;
+}
+
+.submit{
+ //   margin-right: 10px;
+//  margin-top: 25px;
+//  margin-left: 15px;
+}
+
+
+// .submit:hover{
+//     background-color: cadetblue;
+// }
+
+
+button:hover{
+    background-color: cadetblue;
+}
+
+
+
+
+.randomtext{
+    //color: chartreuse;
+//color: #eec40c;
+// height: 180%;
+//float: right;
+color:rgb(234, 238, 14);
+font-family: cursive;
+font-size: 25px;
+//font-weight: ;
+}
+
+input:focus{
+    border: 3px solid greenyellow;
+    width: 500px;
+}
+
+
+.paddingdemo{
+    border: 2px solid black;
+    padding: 15px 10px 15px 10px;
+}
+
+// .box3{
+//     position: absolute;
+//     z-index: 2; /* green box will be above black box */
+//     background: lightgreen;
+//     width: 35%;
+//     left: 270px;
+//     top: -15px;
+//     height: 100px;
+    
+// }
+// .box2{
+//     position: absolute;
+//   z-index: 3; /* gray box will be above both green and black box */
+//   background: lightgray;
+//   height: 60px;  
+//   width: 70%;
+//   left: 50px;
+//   top: 50px;
+// }
+
+// .box1{
+//     position: relative;
+//   z-index: 1;
+//   border: 2px solid black;
+//   height: 100px;
+//   margin: 30px;
+// }
+
+// .box {
+//     position: relative;
+// }
+.paddingdemo:hover{
+   // background-color: chartreuse;
+}
+
+button:first-child{
+    background-color: aqua;
+}
+
+// div.fixed {
+//     position: fixed;
+//     bottom: 0;
+//     right: 0;
+//     width: 300px;
+//     border: 3px solid #73AD21;
+//   }
+
+
+
+:a:visited {
+color: red;
+}
+
+.ele::first-line{
+    color: blue;
+}
+
+
+.ele::first-letter{
+    font-size: 50px;
+}
+
+.selectbehav::selection{
+    color: cadetblue;
+    background-color: blanchedalmond;
+}
+
+.positionfix{
+    position: fixed;
+    //bottom: 0;
+    right: 0;
+    top: 0;
+}
+
+
+.box1{
+position: relative;
+left: 300px;
+width:  500px;
+border: 2px solid grey;
+height: 250px;
+}
+
+.box2{
+    position: absolute;
+    width: 200px;
+    top: 150px;
+    border: 2px solid greenyellow;
+    height: 100px;
+}
+
+
+#zclass{
+    position: absolute;
+    z-index: -1;
+}
+// input:focus{  
+//     border:5px solid lightblue;  
+//     box-shadow:10px 10px 10px black;  
+//     color: blue;  
+//     width:300px;  
+//     }  
+
+
+// div.hello:hover {  
+//     color: red;  
+//     font-size:40px;  
+//   }   
+
+
+// h1::first-letter {   
+//     font-family: Lucida Calligraphy;  
+//     font-size: 3cm;  
+//     color: red;  
+//     text-shadow: 5px 8px 9px green;  
+//     }   
