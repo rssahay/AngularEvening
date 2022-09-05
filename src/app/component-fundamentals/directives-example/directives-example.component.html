@@ -64,7 +64,7 @@ NgForm
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let student of studentDetails; index as r; first as isFirst; last as islast">
+        <tr appCustomHighlighter *ngFor="let student of studentDetails; index as r; first as isFirst; last as islast">
             <td>{{r+1}}</td>
             <td>{{student.Firstname}}</td>
             <td>{{student.lastname}}</td>
@@ -88,9 +88,9 @@ NgForm
 <select [(ngModel)]="selectedValue">
     <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>
 </select>
-<button (click)="cases('One')"> One</button>
-<button (click)="cases('Two')">Two</button>
-<button (click)="cases('Three')">Three</button>
+<button  appCustomHighlighter (click)="cases('One')"> One</button>
+<button  (click)="cases('Two')">Two</button>
+<button appCustomHighlighter (click)="cases('Three')">Three</button>
 
 <div class='row' [ngSwitch]="selectedValue">
     <div *ngSwitchCase="'One'">One is Pressed</div>
@@ -99,9 +99,32 @@ NgForm
 </div>
 
 
+<div [ngClass]="isEvening ? 'helloEvening' : 'helloMorning' ">
+        Hello
+</div>
 
 
-<!-- 
+<div  [ngClass]="classAssigned">
+    <p> Hello learning Directives </p>
+</div>
+
+
+
+<div>
+    <p [ngStyle]="styleapplied">Example showing the ng style use case. </p>
+</div>
+
+<div appCustomHighlighter>
+    Demo for the CUstom Directive
+</div>
+
+<div>
+    <p appCustomHighlighter>2nd demo to show the highlighter</p>
+</div>
+
+
+
+
 <form  #loginForm="ngForm" (ngSubmit)="onSubmitDetails(loginForm)"  >
 <label>Username</label>
 <input type="text" id="username"  name="username" ngModel placeholder="username"> <br>
@@ -112,4 +135,4 @@ NgForm
 <button type="submit">Submit</button>
 
 </form>
-   Value entered{{loginForm.value.password}} -->
+   Value entered{{loginForm.value.password}}

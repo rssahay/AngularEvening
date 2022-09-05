@@ -9,11 +9,37 @@ import { Component, OnInit } from '@angular/core';
 export class DirectivesExampleComponent implements OnInit {
   friday = false
 
+  isEvening= false
+
+  classAssigned :any
+
+  styleapplied :any
   daycheck = true
   constructor() { }
 
   ngOnInit(): void {
+   this.setCss();
+   this.setInline();
   }
+
+
+  setCss(){
+    this.classAssigned = {
+      helloHighlight : false,
+      helloMorning : false,
+      helloEvening:true
+    }
+  }
+
+  setInline(){
+    this.styleapplied = {
+      'font-size' : this.isEvening ? '20px' : '80px',
+      'color' : this.isEvening ? 'aqua' : 'brown'
+    }
+  }
+
+
+  
 
   studentDetails = [{
   //key : value

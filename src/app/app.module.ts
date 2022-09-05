@@ -7,12 +7,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Demo1Component } from './demo1/demo1.component';
 import { HelloworldComponent } from './helloworld/helloworld.component';
 import { ComponentFundamentalsModule } from './component-fundamentals/component-fundamentals.module';
+import { CustomHighlighterDirective } from './Directives/custom-highlighter.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     Demo1Component,
-    HelloworldComponent
+    HelloworldComponent,
+   // CustomHighlighterDirective
   ],
   imports: [
     BrowserModule,

@@ -4,15 +4,17 @@ import { CommonModule } from '@angular/common';
 import { ComponentFundamentalsRoutingModule } from './component-fundamentals-routing.module';
 import { DirectivesExampleComponent } from './directives-example/directives-example.component';
 import { FormsModule } from '@angular/forms';
+import { CustomHighlighterDirective } from '../Directives/custom-highlighter.directive';
 
 
 @NgModule({
   declarations: [
-    DirectivesExampleComponent
+    DirectivesExampleComponent,
+    CustomHighlighterDirective
   ],
   imports: [
     CommonModule,
-    FormsModule  ,    
+    FormsModule  ,
     ComponentFundamentalsRoutingModule
   ],
   exports:[DirectivesExampleComponent]
