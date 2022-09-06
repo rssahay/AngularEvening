@@ -1,0 +1,17 @@
+
+<div class="childstyles">
+
+
+<h2>child works!</h2>
+
+<div>Hello From Child component</div>
+
+<div>
+    {{parentMessage}}
+
+    sum  = {{x+y}}
+</div>
+
+<input type="text" placeholder="ENter message" #usermessage>
+<button (click)="sendMessage(usermessage.value)">Send</button>
+</div>

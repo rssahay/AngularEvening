@@ -1,0 +1,23 @@
+
+<div class="parentstyle">
+    <p>parent works!</p> <br>
+    {{displaymessage}}<br>
+    {{userDisplayMessage}}
+    
+
+    <!-- without using alias name we direct refer to property name -->
+    <!-- <app-child  [parentMessage]="message" [x]="num1" [y]="num2"></app-child> -->
+
+    <!-- when we use alias name -->
+    <app-child  [demomessage]="message" [x]="num1" [y]="num2"
+     (childmessageEvent)="listningfromChild($event)"  
+     
+     (userMessageEvent)="listningUserMessage($event)"></app-child>
+
+
+
+    
+</div>
+
+
+

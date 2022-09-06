@@ -5,18 +5,23 @@ import { ComponentFundamentalsRoutingModule } from './component-fundamentals-rou
 import { DirectivesExampleComponent } from './directives-example/directives-example.component';
 import { FormsModule } from '@angular/forms';
 import { CustomHighlighterDirective } from '../Directives/custom-highlighter.directive';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
   declarations: [
     DirectivesExampleComponent,
-    CustomHighlighterDirective
+    CustomHighlighterDirective,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     CommonModule,
     FormsModule  ,
     ComponentFundamentalsRoutingModule
   ],
-  exports:[DirectivesExampleComponent]
+  exports:[DirectivesExampleComponent,
+    ParentComponent]
 })
 export class ComponentFundamentalsModule { }
