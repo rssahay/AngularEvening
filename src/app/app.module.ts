@@ -8,6 +8,7 @@ import { Demo1Component } from './demo1/demo1.component';
 import { HelloworldComponent } from './helloworld/helloworld.component';
 import { ComponentFundamentalsModule } from './component-fundamentals/component-fundamentals.module';
 import { CustomHighlighterDirective } from './Directives/custom-highlighter.directive';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CustomHighlighterDirective } from './Directives/custom-highlighter.dire
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    ComponentFundamentalsModule
+    ComponentFundamentalsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

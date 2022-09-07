@@ -14,11 +14,17 @@ export class ParentComponent implements OnInit {
 
   displaymessage:any;
   userDisplayMessage:any;
+  studentEducaton :any
+
+  studentName  = 'AKshay'
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  listenEductionDetails(event:any){
+    this.studentEducaton = event;
+  }
 
   listningfromChild(event :any){
     console.log(event)

@@ -3,6 +3,9 @@
     <p>parent works!</p> <br>
     {{displaymessage}}<br>
     {{userDisplayMessage}}
+
+
+    {{studentEducaton}}
     
 
     <!-- without using alias name we direct refer to property name -->
@@ -14,6 +17,8 @@
      
      (userMessageEvent)="listningUserMessage($event)"></app-child>
 
+
+    <app-studen-details-child [name]="studentName"  (Education)="listenEductionDetails($event)"></app-studen-details-child>
 
 
     

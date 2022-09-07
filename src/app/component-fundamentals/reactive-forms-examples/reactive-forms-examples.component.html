@@ -1,0 +1,8 @@
+<label>Username`</label>
+<input type="text" placeholder="Username" [formControl]="username">
+
+<button (click)="update()">update</button>
+<br>
+<button (click)="submit()">Submit</button>
+
+{{username.value}}
