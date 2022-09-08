@@ -9,6 +9,8 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { StudenDetailsChildComponent } from './studen-details-child/studen-details-child.component';
 import { ReactiveFormsExamplesComponent } from './reactive-forms-examples/reactive-forms-examples.component';
+import { LifecycleeventsComponent } from './lifecycleevents/lifecycleevents.component';
+import { Feature2Module } from '../feature2/feature2.module';
 
 
 @NgModule({
@@ -18,13 +20,16 @@ import { ReactiveFormsExamplesComponent } from './reactive-forms-examples/reacti
     ParentComponent,
     ChildComponent,
     StudenDetailsChildComponent,
-    ReactiveFormsExamplesComponent
+    ReactiveFormsExamplesComponent,
+    LifecycleeventsComponent
   ],
   imports: [
     CommonModule,
     FormsModule  ,
     ComponentFundamentalsRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Feature2Module
+    
   ],
   exports:[DirectivesExampleComponent,
     ParentComponent,

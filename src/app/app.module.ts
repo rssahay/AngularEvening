@@ -9,6 +9,9 @@ import { HelloworldComponent } from './helloworld/helloworld.component';
 import { ComponentFundamentalsModule } from './component-fundamentals/component-fundamentals.module';
 import { CustomHighlighterDirective } from './Directives/custom-highlighter.directive';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Feature2Module } from './feature2/feature2.module';
+
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     NgbModule,
     ComponentFundamentalsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Feature2Module
+
   ],
   providers: [],
   bootstrap: [AppComponent],
