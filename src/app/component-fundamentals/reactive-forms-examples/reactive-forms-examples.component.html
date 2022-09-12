@@ -1,5 +1,8 @@
 <label>Username`</label>
 <input type="text" placeholder="Username" [formControl]="username">
+<div *ngIf="username.invalid && (username.dirty || username.touched)">
+    <span>please enter valid details</span>
+</div>
 
 <button (click)="update()">update</button>
 <br>
@@ -8,4 +11,74 @@
 {{username.value}}
 
 
+<h1>Profile Details</h1>
+<form [formGroup]="profile">
+    <label>FirstName</label> : <input type="text" formControlName="firstname">
+    <br>
+    <label>Last Name</label> : <input type="text" formControlName="lastname">
+    <br>
+    <label>Place</label> : <input type="text" formControlName="Place">
+    <br>
+    <label>Mobile No</label> : <input type="text" formControlName="mobile">
+
+</form>
+<button (click)="SubmitProfile()"> Submit Profile</button>
+
+
+<h1>Education Details</h1>
+<form [formGroup]="educationDetails">
+    <label>Qualification <span style="color: red;">*</span></label> : <input type="text"
+        formControlName="qualification">
+    <div *ngIf="educationDetails.controls['qualification'].invalid && 
+        (educationDetails.controls['qualification'].dirty || educationDetails.controls['qualification'].touched)">
+        Please Enter the required Field
+    </div>
+    <br>
+    <label>Passout Year</label> : <input type="text" formControlName="passoutYear">
+    <!-- <div *ngIf="educationDetails.controls['passoutYear'].invalid && 
+    (educationDetails.controls['passoutYear'].dirty || educationDetails.controls['passoutYear'].touched)">
+        Please Enter the required Field
+    </div> -->
+    <div *ngIf="educationDetails.controls['passoutYear'].invalid && 
+    (educationDetails.controls['passoutYear'].dirty || educationDetails.controls['passoutYear'].touched)">
+        <div *ngIf="educationDetails.controls['passoutYear'].errors?.['required']">
+            Please Enter the required Fields
+        </div>
+        <div *ngIf="educationDetails.controls['passoutYear'].errors?.['maxlength'] || educationDetails.controls['passoutYear'].errors?.['minlength'] ">
+            Please enter 4 digit only.
+        </div>
+
+    </div>
+    <br>
+    <label>university</label> : <input type="text" formControlName="university">
+
+
+</form>
+<button (click)="SubmitEducation()"> Submit Education</button>
+
+
+
+
+
+
 <app-testexample></app-testexample>
+
+
+
+
+
+
+
+
+
+
+<!-- <h1>student </h1>
+<form [formGroup]="student">
+    
+    <label>Name</label> :  <input type="text" formControlName="firstname">
+    <div *ngIf="student.controls['firstname'].invalid && (student.controls['firstname'].dirty ||student.controls['firstname'].touched) ">
+        Please enter the required field
+    </div>
+    <br>
+    <button (click)="studentSubmit()">STudentSubmit</button>
+</form> -->
