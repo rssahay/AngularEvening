@@ -10,6 +10,33 @@
 
 {{username.value}}
 
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">lastname</th>
+            <th scope="col">Place</th>
+            <th scope="col">mobilenumber</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr appCustomHighlighter *ngFor="let user of userprofile; index as r; first as isFirst; last as islast">
+            <td>{{r+1}}</td>
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
+            <td>{{user.Place}}</td>
+            <td>{{user.flatno}}</td>
+
+            <td>
+                <button (click) ="Editrecord(user, r)">Edit record</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
 
 <h1>Profile Details</h1>
 <form [formGroup]="profile">
@@ -21,8 +48,22 @@
     <br>
     <label>Mobile No</label> : <input type="text" formControlName="mobile">
 
+    <div formGroupName = "address">
+        <label>flatno</label> : <input type="text" formControlName="flatno">
+        <br>
+        <label>street</label> : <input type="text" formControlName="street">
+        <br>
+        <label>city</label> : <input type="text" formControlName="city">
+        <br>
+        <label>state</label> : <input type="text" formControlName="state">
+
+    </div>
+
+
+
 </form>
 <button (click)="SubmitProfile()"> Submit Profile</button>
+<button (click)="updateProfile()"> update Profile</button>
 
 
 <h1>Education Details</h1>
@@ -39,6 +80,8 @@
     (educationDetails.controls['passoutYear'].dirty || educationDetails.controls['passoutYear'].touched)">
         Please Enter the required Field
     </div> -->
+    
+
     <div *ngIf="educationDetails.controls['passoutYear'].invalid && 
     (educationDetails.controls['passoutYear'].dirty || educationDetails.controls['passoutYear'].touched)">
         <div *ngIf="educationDetails.controls['passoutYear'].errors?.['required']">
