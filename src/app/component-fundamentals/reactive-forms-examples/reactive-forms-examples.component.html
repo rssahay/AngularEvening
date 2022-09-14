@@ -30,7 +30,7 @@
             <td>{{user.flatno}}</td>
 
             <td>
-                <button (click) ="Editrecord(user, r)">Edit record</button>
+                <button (click)="Editrecord(user, r)">Edit record</button>
             </td>
         </tr>
     </tbody>
@@ -48,7 +48,7 @@
     <br>
     <label>Mobile No</label> : <input type="text" formControlName="mobile">
 
-    <div formGroupName = "address">
+    <div formGroupName="address">
         <label>flatno</label> : <input type="text" formControlName="flatno">
         <br>
         <label>street</label> : <input type="text" formControlName="street">
@@ -60,9 +60,27 @@
             <div [hidden]="!state?.errors?.['required']">
                 Please Enter the required Field
             </div>
-       
+
+        </div>
     </div>
+    <h2>Contact</h2>
+    <div formArrayName="contacts">
+        <button (click)="addContactDetails()">Add contact</button>
+        <div *ngFor="let contact of contacts.controls; index as i" [formGroupName]="i">
+            <label>Name</label>
+            <input type="text" formControlName="name"> <br>
+
+            <label>Mobile Number</label>
+            <input type="text" formControlName="phone">
+            <div *ngIf="contact.get('phone')?.invalid && isSubmitted || ( contact.get('phone')?.touched)">
+                <div [hidden]="!contact.get('phone')?.errors?.['required']">
+                    Please Enter the required Field
+                </div>
+               
+            </div>
+        </div>
     </div>
+    
 
 
 
@@ -85,14 +103,15 @@
     (educationDetails.controls['passoutYear'].dirty || educationDetails.controls['passoutYear'].touched)">
         Please Enter the required Field
     </div> -->
-    
+
 
     <div *ngIf="educationDetails.controls['passoutYear'].invalid && 
     (educationDetails.controls['passoutYear'].dirty || educationDetails.controls['passoutYear'].touched)">
         <div *ngIf="educationDetails.controls['passoutYear'].errors?.['required']">
             Please Enter the required Fields
         </div>
-        <div *ngIf="educationDetails.controls['passoutYear'].errors?.['maxlength'] || educationDetails.controls['passoutYear'].errors?.['minlength'] ">
+        <div
+            *ngIf="educationDetails.controls['passoutYear'].errors?.['maxlength'] || educationDetails.controls['passoutYear'].errors?.['minlength'] ">
             Please enter 4 digit only.
         </div>
 

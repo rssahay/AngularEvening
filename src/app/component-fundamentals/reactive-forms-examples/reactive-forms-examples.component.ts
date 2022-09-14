@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -10,7 +10,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ReactiveFormsExamplesComponent implements OnInit {
 
   isSubmitted: boolean = false
-  constructor() { }
+  toShow :boolean = false;
+  constructor( private fb: FormBuilder) { }
 
   username = new FormControl('',Validators.required);
   password =  new FormControl('')
@@ -66,27 +67,50 @@ export class ReactiveFormsExamplesComponent implements OnInit {
     state : 'MH'
   }]
 
-  profile = new FormGroup({
-    firstname :new FormControl(''),
-    lastname : new FormControl(''),
-    Place : new FormControl(''),
-    mobile :new FormControl(''),
+  // profile = new FormGroup({
+  //   firstname :new FormControl(''),
+  //   lastname : new FormControl(''),
+  //   Place : new FormControl(''),
+  //   mobile :new FormControl(''),
     
-    address : new FormGroup({
-      flatno : new FormControl(''),
-      street : new FormControl(''),
-      city: new FormControl(''),
-      state : new FormControl('',Validators.required)
-    })
+  //   address : new FormGroup({
+  //     flatno : new FormControl(''),
+  //     street : new FormControl(''),
+  //     city: new FormControl(''),
+  //     state : new FormControl('',Validators.required)
+  //   }),
 
-    // bankdetails :new FormGroup({
-    //   bankname
-    //   ifsccode
-    //   accountnumber
-    //   accounholdername
-    //   accounttype
-    // })
+  //  contacts :this.fb.array([
+  //   this.fb.group({
+  //     name : [''],
+  //     phone : ['']
+  //   })
+  //  ])
+
+  // }
+  profile = this.fb.group({
+    firstname :[''],
+    lastname : [''],
+    Place : [''],
+    mobile :[''],
+    
+    address : this.fb.group({
+      flatno : [''],
+      street : [''],
+      city: [''],
+      state :['',Validators.required]
+    }),
+
+   contacts :this.fb.array([
+    this.fb.group({
+      name : [''],
+      phone : ['',Validators.required]
+    })
+   ])
+
   })
+
+
 
   educationDetails = new FormGroup({
     qualification: new FormControl('',Validators.required),
@@ -94,6 +118,16 @@ export class ReactiveFormsExamplesComponent implements OnInit {
     university : new FormControl(''),
 
   })
+
+  addContactDetails(){
+    let control = <FormArray>this.profile.controls['contacts'];
+    control.push(
+      this.fb.group({
+        name: [''],
+        phone: ['', [ Validators.required]],
+      })
+    )
+  }
 
   updateProfile(){
     this.profile.patchValue({
@@ -117,6 +151,7 @@ export class ReactiveFormsExamplesComponent implements OnInit {
     this.profile.patchValue({
       firstname : user.firstname,
       lastname : user.lastname,
+      mobile : user.mobile,
       address : {
         city : user.city
       }
@@ -126,6 +161,14 @@ export class ReactiveFormsExamplesComponent implements OnInit {
 
   }
   ngOnInit(): void {
+  }
+
+  get contacts(){
+    return this.profile.get('contacts') as FormArray;
+  }
+
+  get phone(){
+    return this.contacts.get('phone') as FormControl;
   }
 
   get address(){
@@ -152,7 +195,7 @@ export class ReactiveFormsExamplesComponent implements OnInit {
     city: 'delhi',
     state : 'MH'
     })
-    this.profile.reset();
+  //  this.profile.reset();
   }
 
   SubmitEducation(){
