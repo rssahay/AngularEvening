@@ -56,7 +56,12 @@
         <label>city</label> : <input type="text" formControlName="city">
         <br>
         <label>state</label> : <input type="text" formControlName="state">
-
+        <div *ngIf="state?.invalid &&  isSubmitted ||( state?.touched)">
+            <div [hidden]="!state?.errors?.['required']">
+                Please Enter the required Field
+            </div>
+       
+    </div>
     </div>
 
 

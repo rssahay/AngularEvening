@@ -9,6 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ReactiveFormsExamplesComponent implements OnInit {
 
+  isSubmitted: boolean = false
   constructor() { }
 
   username = new FormControl('',Validators.required);
@@ -75,7 +76,7 @@ export class ReactiveFormsExamplesComponent implements OnInit {
       flatno : new FormControl(''),
       street : new FormControl(''),
       city: new FormControl(''),
-      state : new FormControl('')
+      state : new FormControl('',Validators.required)
     })
 
     // bankdetails :new FormGroup({
@@ -127,8 +128,17 @@ export class ReactiveFormsExamplesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get address(){
+    return this.profile.get('address') as FormGroup;
+  }
+  get state(){
+    return this.address.get('state');
+  }
   SubmitProfile(){
-    
+    this.isSubmitted = true
+    this.address.markAllAsTouched()
+    this.state?.markAsTouched();
+    this.state?.markAsDirty()
     console.log(this.profile)
     console.log("Mobile Number" + this.profile.value.mobile)
     console.log("Place" + this.profile.value.Place)
