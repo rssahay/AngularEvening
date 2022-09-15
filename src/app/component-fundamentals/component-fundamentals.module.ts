@@ -11,6 +11,7 @@ import { StudenDetailsChildComponent } from './studen-details-child/studen-detai
 import { ReactiveFormsExamplesComponent } from './reactive-forms-examples/reactive-forms-examples.component';
 import { LifecycleeventsComponent } from './lifecycleevents/lifecycleevents.component';
 import { Feature2Module } from '../feature2/feature2.module';
+import { LifecyclechildComponent } from './lifecycleevents/lifecyclechild/lifecyclechild.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { Feature2Module } from '../feature2/feature2.module';
     ChildComponent,
     StudenDetailsChildComponent,
     ReactiveFormsExamplesComponent,
-    LifecycleeventsComponent
+    LifecycleeventsComponent,
+    LifecyclechildComponent
   ],
   imports: [
     CommonModule,
@@ -33,6 +35,7 @@ import { Feature2Module } from '../feature2/feature2.module';
   ],
   exports:[DirectivesExampleComponent,
     ParentComponent,
-    ReactiveFormsExamplesComponent]
+    ReactiveFormsExamplesComponent,
+    LifecycleeventsComponent]
 })
 export class ComponentFundamentalsModule { }

@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, HostListener, OnChanges, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lifecycleevents',
@@ -14,6 +14,12 @@ AfterViewInit,
 AfterViewChecked,
 OnDestroy {
 
+
+  displayChild: boolean = false;
+  toggle() {
+    this.displayChild = !this.displayChild;
+  }
+  
   constructor() {
     console.log("LifecycleComponent: Constructor");
    }

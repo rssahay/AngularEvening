@@ -1,3 +1,4 @@
+import { getLocaleDateFormat } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -98,7 +99,7 @@ export class ReactiveFormsExamplesComponent implements OnInit {
       flatno : [''],
       street : [''],
       city: [''],
-      state :['',Validators.required]
+      state :['',[Validators.required]]
     }),
 
    contacts :this.fb.array([
@@ -127,6 +128,10 @@ export class ReactiveFormsExamplesComponent implements OnInit {
         phone: ['', [ Validators.required]],
       })
     )
+  }
+
+  delet(index:any){
+
   }
 
   updateProfile(){
@@ -161,6 +166,7 @@ export class ReactiveFormsExamplesComponent implements OnInit {
 
   }
   ngOnInit(): void {
+  
   }
 
   get contacts(){

@@ -1,1 +1,9 @@
 <p>lifecycleevents works!</p>
+
+<button (click)="toggle()">Hide/Show Child</button>
+
+
+<app-lifecyclechild   *ngIf="displayChild"
+[message]="'Hello'">
+
+</app-lifecyclechild>
