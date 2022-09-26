@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 interface Country {
   name: string;
@@ -35,7 +36,8 @@ const COUNTRIES: Country[] = [
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+ templateUrl: './app.component.html',
+
   styleUrls: ['./app.component.scss']
 })
 
@@ -43,14 +45,40 @@ export class AppComponent {
   title = 'AngularTraining';
   countries = COUNTRIES;
 
-  
+  color='violet'
+
+  isenabled:boolean = false
+  cricketScore:any = 100;
+
+  student ={
+    fname : 'aditya',
+    mobileno : 789546,
+    address :{
+      street: 'fc road'
+    }
+  }
+
+  userNavigate(){
+    this._router.navigateByUrl('education')
+    
+   
+  }
+
+  allowUsertoNavigate(){
+    this._router.navigate(['education'])
+   
+  }
+
+  showMessage(){
+    alert("button clicked")
+  }
 
   onSubmit(){
   //alert("you successfully submitted details..!!")
     console.log("form submitted")
   }
 
-  constructor(){
+  constructor( private _router :Router, private _acitvatedRoute : ActivatedRoute){
  
   }
 

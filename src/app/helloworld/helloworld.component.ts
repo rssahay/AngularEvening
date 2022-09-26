@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-helloworld',
@@ -36,8 +37,15 @@ export class HelloworldComponent implements OnInit {
     this.result = x+y;
   }
 
+  constructor(private activatedroute:ActivatedRoute,){
+
+  }
   
   ngOnInit(): void {
+  //  this.activatedroute.queryParamMap.subscribe(params => {
+  //   console.log("params "+ params.get('data'))
+  //  })
+
    
   }
 

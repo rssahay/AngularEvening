@@ -1,0 +1,18 @@
+<p>student-child works!</p>
+
+
+Student Name - {{studentdetails}}
+
+<div>
+    <h1>School</h1>
+    {{school.name}} , {{school.location}} , {{school.state}} , {{school.affiliation.course}}
+</div>
+
+
+<div *ngFor="let item of studentdetails; index as i">
+    {{i+1}} <li>{{item.Firstname}}  -  {{item.lastname}}</li>
+     <li>{{item.address}}</li>
+ </div>
+
+
+ <button (click)="buttonClick()">Send Details</button>

@@ -12,7 +12,13 @@ export class ReactiveFormsExamplesComponent implements OnInit {
 
   isSubmitted: boolean = false
   toShow :boolean = false;
-  constructor( private fb: FormBuilder) { }
+
+  students :any
+  studentname : string =''
+  constructor( private fb: FormBuilder) { 
+
+ 
+  }
 
   username = new FormControl('',Validators.required);
   password =  new FormControl('')
@@ -65,8 +71,10 @@ export class ReactiveFormsExamplesComponent implements OnInit {
     flatno : 744,
     street : 'qqww',
     city: 'mumbai',
-    state : 'MH'
+    state : 'MH',
+
   }]
+
 
   // profile = new FormGroup({
   //   firstname :new FormControl(''),
@@ -89,6 +97,24 @@ export class ReactiveFormsExamplesComponent implements OnInit {
   //  ])
 
   // }
+
+  bankdetails = this.fb.group({
+    accounttype : [''],
+    ifsc :[''],
+    accounholderName :[''],
+
+    emergencycontact : this.fb.array([
+       this.fb.group({
+        conatctName : [''],
+        phonenumber : ['']
+      })
+    ])
+   
+
+
+  })
+
+
   profile = this.fb.group({
     firstname :[''],
     lastname : [''],
@@ -131,7 +157,7 @@ export class ReactiveFormsExamplesComponent implements OnInit {
   }
 
   delet(index:any){
-
+   
   }
 
   updateProfile(){
@@ -170,7 +196,8 @@ export class ReactiveFormsExamplesComponent implements OnInit {
   }
 
   get contacts(){
-    return this.profile.get('contacts') as FormArray;
+  return this.profile.get('contacts') as FormArray
+   
   }
 
   get phone(){
@@ -181,7 +208,7 @@ export class ReactiveFormsExamplesComponent implements OnInit {
     return this.profile.get('address') as FormGroup;
   }
   get state(){
-    return this.address.get('state');
+    return this.address.get('state') as FormControl;
   }
   SubmitProfile(){
     this.isSubmitted = true

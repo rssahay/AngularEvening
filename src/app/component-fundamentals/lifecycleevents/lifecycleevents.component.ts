@@ -22,6 +22,7 @@ OnDestroy {
   
   constructor() {
     console.log("LifecycleComponent: Constructor");
+
    }
 
 
@@ -31,6 +32,23 @@ OnDestroy {
 
   ngOnInit() {
     console.log("LifecycleComponent: OnInit");
+   this.asd();
+    this.xyz();
+    
+    this.abc1();
+  }
+
+  abc1()
+  {
+
+  }
+
+  xyz(){
+
+  }
+
+  asd(){
+
   }
 
   ngDoCheck() {

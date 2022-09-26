@@ -12,6 +12,8 @@ import { ReactiveFormsExamplesComponent } from './reactive-forms-examples/reacti
 import { LifecycleeventsComponent } from './lifecycleevents/lifecycleevents.component';
 import { Feature2Module } from '../feature2/feature2.module';
 import { LifecyclechildComponent } from './lifecycleevents/lifecyclechild/lifecyclechild.component';
+import { SchoolParentComponent } from './school-parent/school-parent.component';
+import { StudentChildComponent } from './student-child/student-child.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { LifecyclechildComponent } from './lifecycleevents/lifecyclechild/lifecy
     StudenDetailsChildComponent,
     ReactiveFormsExamplesComponent,
     LifecycleeventsComponent,
-    LifecyclechildComponent
+    LifecyclechildComponent,
+    SchoolParentComponent,
+    StudentChildComponent
   ],
   imports: [
     CommonModule,
@@ -36,6 +40,7 @@ import { LifecyclechildComponent } from './lifecycleevents/lifecyclechild/lifecy
   exports:[DirectivesExampleComponent,
     ParentComponent,
     ReactiveFormsExamplesComponent,
-    LifecycleeventsComponent]
+    LifecycleeventsComponent,
+    SchoolParentComponent]
 })
 export class ComponentFundamentalsModule { }

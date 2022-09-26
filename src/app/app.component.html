@@ -9,6 +9,8 @@
 
 <!-- <app-directives-example></app-directives-example> -->
 
+<!-- <app-school-parent></app-school-parent> -->
+
 
 <!-- <app-parent></app-parent> -->
 
@@ -16,16 +18,26 @@
 
 <!-- <app-lifecycleevents></app-lifecycleevents> -->
 
+
 <div>
      Select option to navigate
 
-     <a routerLink="/qwerty">Hello Component </a> <br>
+     <a routerLink="/hello/45">Hello Component </a> <br>
      <a routerLink="/demo" > Demo</a>
+
+     <li><a [routerLink]="['demo']"  [queryParams] = "{place : 'delhi', location: 'indiagate', pincode:78965,showData: true}">Send Data to Demo</a></li>
+     <li> <a routerLink="/education"> Education</a></li>
+     <button (click)="userNavigate()"> Click to Navigate</button>
+
+     <button (click)="allowUsertoNavigate()"> Click 2nd Approach</button>
 </div>
+
 <router-outlet></router-outlet>
 
+<div>
 
-
+</div>
+<!-- [queryParams]="{data : 'hello',check:'test'} -->
 
 
  <!-- <div  app-helloworld>
@@ -44,3 +56,17 @@
  <div class="app-helloworld">
 
 </div> -->
+
+
+
+<!-- {{cricketScore}}
+
+<div appHoverhighlighter>
+     {{student.fname}}   -  {{student.mobileno}}  -  {{student.address.street}}
+</div>
+
+<button [disabled]="isenabled" (click)="showMessage()">Submit</button>
+
+<div   [innerText] = "student.address.street"></div> -->
+
+

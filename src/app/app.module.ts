@@ -10,6 +10,9 @@ import { ComponentFundamentalsModule } from './component-fundamentals/component-
 import { CustomHighlighterDirective } from './Directives/custom-highlighter.directive';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Feature2Module } from './feature2/feature2.module';
+import { HoverhighlighterDirective } from './Directives/hoverhighlighter.directive';
+import { EducationComponent } from './education/education.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 
@@ -18,6 +21,9 @@ import { Feature2Module } from './feature2/feature2.module';
     AppComponent,
     Demo1Component,
     HelloworldComponent,
+    HoverhighlighterDirective,
+    EducationComponent,
+    PagenotfoundComponent,
    // CustomHighlighterDirective
   ],
   imports: [

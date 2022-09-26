@@ -35,4 +35,8 @@ export class ParentComponent implements OnInit {
     this.userDisplayMessage = event;
   }
 
+  recievemessage(event :any){
+    console.log("message got ", event)
+  }
+
 }

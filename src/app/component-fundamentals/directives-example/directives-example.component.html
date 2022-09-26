@@ -88,9 +88,9 @@ NgForm
 <select [(ngModel)]="selectedValue">
     <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>
 </select>
-<button  appCustomHighlighter (click)="cases('One')"> One</button>
+<button   (click)="cases('One')"> One</button>
 <button  (click)="cases('Two')">Two</button>
-<button appCustomHighlighter (click)="cases('Three')">Three</button>
+<button  (click)="cases('Three')">Three</button>
 
 <div class='row' [ngSwitch]="selectedValue">
     <div *ngSwitchCase="'One'">One is Pressed</div>
@@ -138,3 +138,18 @@ NgForm
    Value entered{{loginForm.value.password}}
 
 
+<div *ngIf="isShow; then thenmessage else elsemessage">
+   
+</div>
+<ng-template #thenmessage> Hello message showing </ng-template>
+
+<ng-template #elsemessage>
+    <div>
+        Show the second message
+    </div>
+</ng-template>
+
+<div *ngFor="let item of studentDetails; index as i">
+   {{i+1}} <li>{{item.Firstname}}  -  {{item.lastname}}</li>
+    <li>{{item.address}}</li>
+</div>

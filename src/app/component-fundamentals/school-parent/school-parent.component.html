@@ -1,0 +1,29 @@
+<p>school-parent works!</p>
+<span>{{topperName}}</span>
+
+<app-student-child [studentdetails]="studentDetails"  [school] = 'schoolDetails' (studenTopper)="recieve($event)"></app-student-child>
+
+
+<form [formGroup]="userInfo">
+    <label>Firstname</label>
+    <input type="text" formControlName="firstname"> <br>
+    <label>lastname</label>
+    <input type="text" formControlName="lastname"> <br>
+    <label>mobileno</label>
+    <input type="text" formControlName="mobileno"> <br>
+
+    <div formGroupName="address">
+        <label>lane1</label>
+        <input type="text" formControlName="lane1"> <br>
+        <label>street</label>
+        <input type="text" formControlName="street"> <br>
+        <label>city</label>
+        <input type="text" formControlName="city"> <br>
+    
+
+    </div>
+</form>
+<button (click)="submitdetails()">Submit</button>
+
+
+<input type="text" [formControl]="email">

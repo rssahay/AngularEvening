@@ -15,10 +15,13 @@
     <app-child  [demomessage]="message" [x]="num1" [y]="num2"
      (childmessageEvent)="listningfromChild($event)"  
      
-     (userMessageEvent)="listningUserMessage($event)"></app-child>
+     (userMessageEvent)="listningUserMessage($event)"
+     
+     (sendmessage)="recievemessage($event)"
+     ></app-child>
 
 
-    <app-studen-details-child [name]="studentName"  (Education)="listenEductionDetails($event)"></app-studen-details-child>
+    <app-studen-details-child [name]="studentName" ></app-studen-details-child>
 
 
     

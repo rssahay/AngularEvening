@@ -15,6 +15,8 @@ export class DirectivesExampleComponent implements OnInit {
 
   styleapplied :any
   daycheck = true
+
+  isShow = true;
   constructor() { }
 
   ngOnInit(): void {
