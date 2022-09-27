@@ -22,11 +22,20 @@
 <div>
      Select option to navigate
 
-     <a routerLink="/hello/45">Hello Component </a> <br>
+     <a routerLink="/hello/shopcategory">Hello Component </a> <br>
+
      <a routerLink="/demo" > Demo</a>
+     <li><a routerLink ="/hello/mens">Mens Section</a></li>
+     <!-- <li><a routerLink ="/hello/mens/mensfootwear">Mens  Footear Section</a></li>
+
+     <li><a routerLink ="/hello/mens/menwatch">Mens  Watch Section</a></li> -->
+
+     <li><a routerLink ="/hello/girls">Girls Section</a></li>
 
      <li><a [routerLink]="['demo']"  [queryParams] = "{place : 'delhi', location: 'indiagate', pincode:78965,showData: true}">Send Data to Demo</a></li>
      <li> <a routerLink="/education"> Education</a></li>
+
+     <li><a [routerLink]="['education']" [state]="{id:15, name:'David'}"> Education State link</a></li>
      <button (click)="userNavigate()"> Click to Navigate</button>
 
      <button (click)="allowUsertoNavigate()"> Click 2nd Approach</button>

@@ -13,6 +13,11 @@ import { Feature2Module } from './feature2/feature2.module';
 import { HoverhighlighterDirective } from './Directives/hoverhighlighter.directive';
 import { EducationComponent } from './education/education.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ShopCategoryComponent } from './shop-category/shop-category.component';
+import { MensSectionComponent } from './mens-section/mens-section.component';
+import { GirlsSectionComponent } from './girls-section/girls-section.component';
+import { MenFootwearComponent } from './men-footwear/men-footwear.component';
+import { MenwatchComponent } from './menwatch/menwatch.component';
 
 
 
@@ -24,6 +29,11 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     HoverhighlighterDirective,
     EducationComponent,
     PagenotfoundComponent,
+    ShopCategoryComponent,
+    MensSectionComponent,
+    GirlsSectionComponent,
+    MenFootwearComponent,
+    MenwatchComponent,
    // CustomHighlighterDirective
   ],
   imports: [

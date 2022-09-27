@@ -16,9 +16,10 @@ pincode:any
   ngOnInit(): void {
     
    let city =  this._activatedroute.snapshot.queryParamMap.get('place')
-   
+
    console.log('City = ',city)
 
+   
     this._activatedroute.queryParamMap.subscribe( (param)=>{
       this.place = param.get('place')
       this.location = param.get('location')

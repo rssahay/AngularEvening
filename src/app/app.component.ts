@@ -59,7 +59,9 @@ export class AppComponent {
   }
 
   userNavigate(){
-    this._router.navigateByUrl('education')
+   // this._router.navigateByUrl('education')
+
+   this._router.navigate(['demo'],{queryParams :{place : 'mumbai', location: 'churchgate', pincode:78965,showData: false}})
     
    
   }

@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./education.component.scss']
 })
 export class EducationComponent implements OnInit {
-
-  constructor() { }
+ recievedData :any
+  constructor(private _location : Location) { }
 
   ngOnInit(): void {
+    this.recievedData = history.state;
+    console.log("Data = ",this.recievedData)
 
-    console.log('Hello Form Education')
+    //using location
+    console.log(this._location.getState())
   }
 
 }
