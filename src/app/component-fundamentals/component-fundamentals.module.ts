@@ -14,6 +14,7 @@ import { Feature2Module } from '../feature2/feature2.module';
 import { LifecyclechildComponent } from './lifecycleevents/lifecyclechild/lifecyclechild.component';
 import { SchoolParentComponent } from './school-parent/school-parent.component';
 import { StudentChildComponent } from './student-child/student-child.component';
+import { LoginuserComponent } from './loginuser/loginuser.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { StudentChildComponent } from './student-child/student-child.component';
     LifecycleeventsComponent,
     LifecyclechildComponent,
     SchoolParentComponent,
-    StudentChildComponent
+    StudentChildComponent,
+    LoginuserComponent
   ],
   imports: [
     CommonModule,

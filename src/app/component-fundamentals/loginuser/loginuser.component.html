@@ -1,0 +1,27 @@
+
+<h1> Login </h1>
+
+<h3>{{loginmessage}}</h3>
+
+<form [formGroup]="loginForm">
+    <!-- <label>Qualification <span style="color: red;">*</span></label> : <input type="text"
+        formControlName="qualification">
+    <br> -->
+    <div class="mb-3">
+   
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1"formControlName = "username" placeholder="name@example.com">
+      </div>
+    
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Password</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1"  formControlName = "password">
+      </div>
+
+
+</form>
+<button type="button" class="btn btn-primary" (click)="onSubmit()"> Login</button>
+
+<div>
+    <button type="button" class="btn btn-dark" (click)="onLogout()">Logout</button>
+</div>
