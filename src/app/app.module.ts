@@ -18,6 +18,7 @@ import { MensSectionComponent } from './mens-section/mens-section.component';
 import { GirlsSectionComponent } from './girls-section/girls-section.component';
 import { MenFootwearComponent } from './men-footwear/men-footwear.component';
 import { MenwatchComponent } from './menwatch/menwatch.component';
+import { AdminModule } from './admin/admin.module';
 
 
 
@@ -42,8 +43,8 @@ import { MenwatchComponent } from './menwatch/menwatch.component';
     NgbModule,
     ComponentFundamentalsModule,
     ReactiveFormsModule,
-    Feature2Module
-
+    Feature2Module,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent],

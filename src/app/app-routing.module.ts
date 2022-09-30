@@ -1,8 +1,11 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { Demo1Component } from './demo1/demo1.component';
 import { EducationComponent } from './education/education.component';
 import { GirlsSectionComponent } from './girls-section/girls-section.component';
+import { AuthGuardGuard } from './Guards/auth-guard.guard';
+import { UserAuthGuard } from './Guards/user-auth.guard';
 import { HelloworldComponent } from './helloworld/helloworld.component';
 import { MenFootwearComponent } from './men-footwear/men-footwear.component';
 import { MensSectionComponent } from './mens-section/mens-section.component';
@@ -13,6 +16,9 @@ import { ShopCategoryComponent } from './shop-category/shop-category.component';
 const routes: Routes = [
   {
     path: 'education', component: EducationComponent
+  },
+  {
+    path:'dashboard' , component: DashboardComponent
   },
   {
     path: 'hello', component: HelloworldComponent,
@@ -31,14 +37,23 @@ const routes: Routes = [
 
   },
   {
-    path: 'demo', component: Demo1Component
+    path: 'demo', component: Demo1Component, canActivate:[AuthGuardGuard]
+  },
+
+  {
+    path:'feature1', 
+    loadChildren: () => import('./feature1/feature1.module').then(el => el.Feature1Module)
+  },
+  {
+    path:'feature2',
+    loadChildren:() => import('./feature2/feature2.module').then(m => m.Feature2Module)
   },
   {
     path: '', redirectTo: '/demo', pathMatch: 'full'
   },
-  {
-    path: '**', component: PagenotfoundComponent
-  }
+  // {
+  //   path: '**', component: PagenotfoundComponent
+  // }
 ];
 
 @NgModule({

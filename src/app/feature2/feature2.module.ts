@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { Feature2RoutingModule } from './feature2-routing.module';
 import { TestexampleComponent } from './testexample/testexample.component';
+import { DiscountoffersComponent } from './discountoffers/discountoffers.component';
+import { CashbckComponent } from './cashbck/cashbck.component';
 
 
 @NgModule({
   declarations: [
-    TestexampleComponent
+    TestexampleComponent,
+    DiscountoffersComponent,
+    CashbckComponent
   ],
   imports: [
     CommonModule,
