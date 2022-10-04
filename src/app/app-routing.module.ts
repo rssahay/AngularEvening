@@ -1,12 +1,15 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
-import { LoginComponent } from './common-feature/login/login.component';
+
 import { LoginuserComponent } from './component-fundamentals/loginuser/loginuser.component';
+import { ReactiveProgramComponent } from './component-fundamentals/reactive-program/reactive-program.component';
 import { Demo1Component } from './demo1/demo1.component';
 import { EducationComponent } from './education/education.component';
 import { GirlsSectionComponent } from './girls-section/girls-section.component';
 import { AuthGuardGuard } from './Guards/auth-guard.guard';
+import { ConfirmationGuard } from './Guards/confirmation.guard';
+import { ExitCompoentGuard } from './Guards/exit-compoent.guard';
 import { UserAuthGuard } from './Guards/user-auth.guard';
 import { HelloworldComponent } from './helloworld/helloworld.component';
 import { MenFootwearComponent } from './men-footwear/men-footwear.component';
@@ -49,10 +52,14 @@ const routes: Routes = [
   },
   {
     path: 'feature2',
-    loadChildren: () => import('./feature2/feature2.module').then(m => m.Feature2Module)
+    loadChildren: () => import('./feature2/feature2.module').then(m => m.Feature2Module),
+    canLoad:[]
   },
   {
-    path: 'login', component: LoginuserComponent
+    path: 'login', component: LoginuserComponent ,canDeactivate:[ConfirmationGuard]
+  },
+  {
+    path: 'rx',component:ReactiveProgramComponent
   },
   {
     path: '', redirectTo: '/login', pathMatch: 'full'

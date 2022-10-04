@@ -5,6 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class CommonFeatureService {
 
+  userChangedValue :boolean =false;
+
+  unchangedChanges :boolean =false
+
+  getunchangedChanges(){
+    return this.unchangedChanges;
+  }
+
+  setuserChnagesChanges(value :boolean){
+    this.unchangedChanges = value;
+  }
+
   userDetails =[{
     username : "abc@gmail.com",
     password:1234
@@ -54,5 +66,13 @@ export class CommonFeatureService {
 
   getUserInfo(){
     return this.userDetails;
+  }
+
+  setUserchangedValue(value :boolean){
+    this.userChangedValue = value;
+  }
+
+  getuserCHangedValue(){
+    return this.userChangedValue;
   }
 }

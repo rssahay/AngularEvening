@@ -15,6 +15,7 @@ import { LifecyclechildComponent } from './lifecycleevents/lifecyclechild/lifecy
 import { SchoolParentComponent } from './school-parent/school-parent.component';
 import { StudentChildComponent } from './student-child/student-child.component';
 import { LoginuserComponent } from './loginuser/loginuser.component';
+import { ReactiveProgramComponent } from './reactive-program/reactive-program.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { LoginuserComponent } from './loginuser/loginuser.component';
     LifecyclechildComponent,
     SchoolParentComponent,
     StudentChildComponent,
-    LoginuserComponent
+    LoginuserComponent,
+    ReactiveProgramComponent
   ],
   imports: [
     CommonModule,

@@ -9,6 +9,8 @@ import { CommonFeatureService } from 'src/app/Services/common-feature.service';
 })
 export class LoginuserComponent implements OnInit {
   loginmessage: any;
+
+  userEnetered :boolean = false;
   constructor(private _commonfeature: CommonFeatureService,private fb :FormBuilder) { }
 
   loginForm  = this.fb.group({
@@ -16,7 +18,41 @@ export class LoginuserComponent implements OnInit {
     password: ['']
   })
 
+  
+
   ngOnInit(): void {
+
+    this.loginForm.valueChanges.subscribe(formvalue =>{
+      console.log(formvalue)
+      this._commonfeature.setuserChnagesChanges(true)  
+    })
+    this._commonfeature.setuserChnagesChanges(false);
+
+
+    this.loginForm.valueChanges.subscribe(elvalue =>{
+      //console.log(elvalue)
+      this._commonfeature.setUserchangedValue(true);
+    })
+    this._commonfeature.setUserchangedValue(false)
+
+
+    console.log("hello")
+    setTimeout(() => {
+      console.log("learning reactive progrmaming")
+    }, 3000);
+    setTimeout(() => {
+      console.log("i am able to understand")
+    }, 1000);
+     console.log("i want to be first")
+
+
+
+
+
+  }
+
+  getUserEneterdValue(){
+    return this.userEnetered;
   }
 
   onSubmit() {
