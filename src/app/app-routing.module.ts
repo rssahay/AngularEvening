@@ -4,6 +4,7 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 import { LoginuserComponent } from './component-fundamentals/loginuser/loginuser.component';
 import { ReactiveProgramComponent } from './component-fundamentals/reactive-program/reactive-program.component';
+import { RxjsExampleComponent } from './component-fundamentals/rxjs-example/rxjs-example.component';
 import { Demo1Component } from './demo1/demo1.component';
 import { EducationComponent } from './education/education.component';
 import { GirlsSectionComponent } from './girls-section/girls-section.component';
@@ -57,6 +58,9 @@ const routes: Routes = [
   },
   {
     path: 'login', component: LoginuserComponent ,canDeactivate:[ConfirmationGuard]
+  },
+  {
+    path :'rxjsExample',  component: RxjsExampleComponent
   },
   {
     path: 'rx',component:ReactiveProgramComponent
