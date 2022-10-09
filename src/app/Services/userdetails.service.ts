@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CommonFeatureService } from './common-feature.service';
 
@@ -44,7 +45,7 @@ export class UserdetailsService {
   }]
   
 
-  constructor(private commonFeat : CommonFeatureService) { }
+  constructor(private commonFeat : CommonFeatureService,private http: HttpClient) { }
 
 
   getName(){
@@ -53,5 +54,17 @@ export class UserdetailsService {
 
   getStudentDetails(){
     return this.studentDetails;
+  }
+
+  getFlightDetails(){
+    return this.http.get('http://localhost:3000/packages/1')
+  }
+
+  saveflight(obj :any){
+   return this.http.post('http://localhost:3000/packages',obj)
+  }
+
+  editflightrecords(id:any,body:any){
+    return this.http.put('http://localhost:3000/packages/'+id,body)
   }
 }

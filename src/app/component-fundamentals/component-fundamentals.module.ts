@@ -17,6 +17,8 @@ import { StudentChildComponent } from './student-child/student-child.component';
 import { LoginuserComponent } from './loginuser/loginuser.component';
 import { ReactiveProgramComponent } from './reactive-program/reactive-program.component';
 import { RxjsExampleComponent } from './rxjs-example/rxjs-example.component';
+import { RxjsSubjectsExampleComponent } from './rxjs-subjects-example/rxjs-subjects-example.component';
+import { UserHttpExampleComponent } from './user-http-example/user-http-example.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { RxjsExampleComponent } from './rxjs-example/rxjs-example.component';
     StudentChildComponent,
     LoginuserComponent,
     ReactiveProgramComponent,
-    RxjsExampleComponent
+    RxjsExampleComponent,
+    RxjsSubjectsExampleComponent,
+    UserHttpExampleComponent
   ],
   imports: [
     CommonModule,

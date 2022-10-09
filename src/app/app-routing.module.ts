@@ -5,6 +5,8 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { LoginuserComponent } from './component-fundamentals/loginuser/loginuser.component';
 import { ReactiveProgramComponent } from './component-fundamentals/reactive-program/reactive-program.component';
 import { RxjsExampleComponent } from './component-fundamentals/rxjs-example/rxjs-example.component';
+import { RxjsSubjectsExampleComponent } from './component-fundamentals/rxjs-subjects-example/rxjs-subjects-example.component';
+import { UserHttpExampleComponent } from './component-fundamentals/user-http-example/user-http-example.component';
 import { Demo1Component } from './demo1/demo1.component';
 import { EducationComponent } from './education/education.component';
 import { GirlsSectionComponent } from './girls-section/girls-section.component';
@@ -61,6 +63,13 @@ const routes: Routes = [
   },
   {
     path :'rxjsExample',  component: RxjsExampleComponent
+  },
+  {
+    path:'rxjsSubject' , component:RxjsSubjectsExampleComponent
+  },
+  
+  {
+    path: 'user', component: UserHttpExampleComponent
   },
   {
     path: 'rx',component:ReactiveProgramComponent

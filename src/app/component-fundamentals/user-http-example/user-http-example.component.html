@@ -1,0 +1,28 @@
+<p>user-http-example works!</p>
+
+<table>
+    <tr>
+        <th>
+            email
+        </th>
+        <th>
+            password
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+    <tr *ngFor="let user of userCredentials">
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
+        <td><button (click)="EditRecords()" > Edit</button></td>
+    </tr>
+</table>
+
+<div>
+    <form [formGroup]="userForm">
+        <label>Email</label> <input type="text" formControlName = "email" placeholder="email"> <br>
+        <label>Password</label> <input type="text" formControlName = "password" placeholder="password"> <br>
+    </form>
+    <button (click)="SubmitUserRecords()">SUbmit</button>
+</div>

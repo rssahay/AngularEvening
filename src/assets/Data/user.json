@@ -1,0 +1,233 @@
+{
+  "packages": [
+    {
+      "from": "mumbai",
+      "to": "goa",
+      "duration": "6N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 5,
+      "Price": 50000,
+      "id": 1
+    },
+    {
+      "from": "leh",
+      "to": "delhi",
+      "duration": "10N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 3,
+      "Price": 75000,
+      "id": 2
+    },
+    {
+      "from": "mumbai",
+      "to": "goa",
+      "duration": "6N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 5,
+      "Price": 50000,
+      "id": 3
+    },
+    {
+      "from": "mumbai",
+      "to": "dubai",
+      "duration": "6N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 5,
+      "Price": 80000,
+      "id": 4
+    },
+    {
+      "from": "mumbai",
+      "to": "thailand",
+      "duration": "6N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 5,
+      "Price": 100000,
+      "id": 5
+    },
+    {
+      "from": "delhi",
+      "to": "goa",
+      "duration": "6N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 5,
+      "Price": 80000,
+      "id": 6
+    },
+    {
+      "from": "chennai",
+      "to": "delhi",
+      "duration": "10N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 3,
+      "Price": 75000,
+      "id": 7
+    },
+    {
+      "from": "chennai",
+      "to": "delhi",
+      "duration": "10N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 3,
+      "Price": 75000,
+      "id": 8
+    },
+    {
+      "from": "chennai",
+      "to": "delhi",
+      "duration": "10N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 3,
+      "Price": 75000,
+      "id": 9
+    },
+    {
+      "from": "chennai",
+      "to": "delhi",
+      "duration": "10N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 3,
+      "Price": 75000,
+      "id": 10
+    },
+    {
+      "from": "chennai",
+      "to": "delhi",
+      "duration": "10N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 3,
+      "Price": 75000,
+      "id": 11
+    },
+    {
+      "from": "chennai",
+      "to": "delhi",
+      "duration": "10N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 3,
+      "Price": 75000,
+      "id": 12
+    },
+    {
+      "from": "chennai",
+      "to": "delhi",
+      "duration": "10N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 3,
+      "Price": 75000,
+      "id": 13
+    },
+    {
+      "from": "chennai",
+      "to": "delhi",
+      "duration": "10N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 3,
+      "Price": 75000,
+      "id": 14
+    },
+    {
+      "from": "chennai",
+      "to": "delhi",
+      "duration": "10N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 3,
+      "Price": 75000,
+      "id": 15
+    },
+    {
+      "from": "chennai",
+      "to": "delhi",
+      "duration": "10N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 3,
+      "Price": 75000,
+      "id": 16
+    },
+    {
+      "from": "chennai",
+      "to": "delhi",
+      "duration": "10N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 3,
+      "Price": 75000,
+      "id": 17
+    },
+    {
+      "from": "chennai",
+      "to": "delhi",
+      "duration": "10N",
+      "flights": 1,
+      "hotel": 2,
+      "Activities": 3,
+      "Price": 75000,
+      "id": 18
+    }
+  ],
+  "users": [
+    {
+      "email": "aaa@gmail.com",
+      "password": "aaa",
+      "id": 1
+    },
+    {
+      "email": "bbb@gmail.com",
+      "password": "bbb",
+      "id": 2
+    },
+    {
+      "email": "ccc@gmail.com",
+      "password": "ccc",
+      "id": 3
+    },
+    {
+      "email": "ddd@gmail.com",
+      "password": "ddd",
+      "id": 4
+    },
+    {
+      "email": "qwe@gmail.com",
+      "password": "qwe",
+      "id": 5
+    },
+    {
+      "email": "iop@gmail.ocm",
+      "password": "iop",
+      "id": 6
+    },
+    {
+      "email": "asd@gmail.com",
+      "password": "asd",
+      "id": 7
+    }
+  ],
+  "students": [
+    {
+      "fname": "Akshay",
+      "Location": "pune",
+      "id": 1
+    },
+    {
+      "fname": "aditya",
+      "Location": "pune",
+      "id": 2
+    }
+  ]
+}

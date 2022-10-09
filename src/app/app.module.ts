@@ -19,6 +19,8 @@ import { GirlsSectionComponent } from './girls-section/girls-section.component';
 import { MenFootwearComponent } from './men-footwear/men-footwear.component';
 import { MenwatchComponent } from './menwatch/menwatch.component';
 import { AdminModule } from './admin/admin.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -35,6 +37,7 @@ import { AdminModule } from './admin/admin.module';
     GirlsSectionComponent,
     MenFootwearComponent,
     MenwatchComponent,
+    
    // CustomHighlighterDirective
   ],
   imports: [
@@ -44,7 +47,8 @@ import { AdminModule } from './admin/admin.module';
     ComponentFundamentalsModule,
     ReactiveFormsModule,
     Feature2Module,
-    AdminModule
+    AdminModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
