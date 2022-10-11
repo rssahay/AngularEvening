@@ -10,6 +10,8 @@ import { UserService } from 'src/app/Services/user.service';
 export class UserHttpExampleComponent implements OnInit {
 
   userCredentials :any;
+  edituserRecords :any
+  disableSubmit :boolean = false;
   constructor(private _userservice: UserService) { }
 
   userForm = new FormGroup({
@@ -34,10 +36,39 @@ export class UserHttpExampleComponent implements OnInit {
     })
   }
 
-  EditRecords(){
-    
+  EditRecords(user :any){
+    this.userForm.patchValue({
+      email: user.email,
+      password: user.password
+    })
+    this.edituserRecords = user
+    this.disableSubmit = true
   }
 
+  updateUserRecords(){
+    let obj ={
+      email : this.userForm.value.email,
+      password : this.userForm.value.password,
+      id : this.edituserRecords.id
+    }
+    
+    this._userservice.edituserInfo(this.edituserRecords.id, obj).subscribe( res =>{
+      console.log("Data updated "+ res)
+      this.userForm.reset();
+      this.getuserInfo();
+      this.disableSubmit =false;
+
+    })
+
+  }
+
+  deleteRecords(user :any){
+    this._userservice.deleteUserInfo(user.id).subscribe(resposnse => {
+      console.log("Data deleted ")
+      this.getuserInfo();
+    })
+
+  }
 
 
   getuserInfo() {

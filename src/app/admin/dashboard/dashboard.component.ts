@@ -49,17 +49,21 @@ export class DashboardComponent implements OnInit {
       "Price": 75000,
       "id":'2'
   }
-    // this._user.editflightrecords(2,obj).subscribe(res => {
-    //   console.log("data updated" + res)
-    // },(error) => {console.log(error)})
-    this._user.editflightrecords(2,obj).subscribe({
-      next(value) {
-        console.log("data updated" + value)
-      },
-      error(err) {
-        console.log(err)
-      },
-    })
+    this._user.editflightrecords(2,obj).subscribe(res => {
+      console.log("data updated" + res)
+    },(error) => {console.log(error)})
+
+
+
+    
+    // this._user.editflightrecords(2,obj).subscribe({
+    //   next(value) {
+    //     console.log("data updated" + value)
+    //   },
+    //   error(err) {
+    //     console.log(err)
+    //   },
+    // })
   }
 
 

@@ -13,9 +13,11 @@
         </th>
     </tr>
     <tr *ngFor="let user of userCredentials">
+        <td>{{user.id}}</td>
         <td>{{user.email}}</td>
         <td>{{user.password}}</td>
-        <td><button (click)="EditRecords()" > Edit</button></td>
+        <td><button (click)="EditRecords(user)" > Edit</button></td>
+        <td><button (click)="deleteRecords(user)" > Delete</button></td>
     </tr>
 </table>
 
@@ -24,5 +26,6 @@
         <label>Email</label> <input type="text" formControlName = "email" placeholder="email"> <br>
         <label>Password</label> <input type="text" formControlName = "password" placeholder="password"> <br>
     </form>
-    <button (click)="SubmitUserRecords()">SUbmit</button>
+    <button (click)="SubmitUserRecords()" [disabled]="disableSubmit">Submit</button>
+    <button (click)="updateUserRecords()">Update</button>
 </div>

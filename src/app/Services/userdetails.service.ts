@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CommonFeatureService } from './common-feature.service';
 
@@ -9,62 +9,65 @@ export class UserdetailsService {
 
   studentDetails = [{
     //key : value
-    Firstname : 'akshay',
-    lastname : 'kumar',
-    address : 'pune',
-    mobilenumber : 48965833
+    Firstname: 'akshay',
+    lastname: 'kumar',
+    address: 'pune',
+    mobilenumber: 48965833
   },
   {
     //key : value
-    Firstname : 'Amol',
-    lastname : 'nn',
-    address : 'pune',
-    mobilenumber : 489688899
+    Firstname: 'Amol',
+    lastname: 'nn',
+    address: 'pune',
+    mobilenumber: 489688899
   },
   {
     //key : value
-    Firstname : 'sujit',
-    lastname : 'kk',
-    address : 'pune',
-    mobilenumber : 489688899
-    
+    Firstname: 'sujit',
+    lastname: 'kk',
+    address: 'pune',
+    mobilenumber: 489688899
+
   },
   {
     //key : value
-    Firstname : 'Aditya',
-    lastname : 'kk',
-    address : 'pune',
-    mobilenumber : 489688899
+    Firstname: 'Aditya',
+    lastname: 'kk',
+    address: 'pune',
+    mobilenumber: 489688899
   },
   {
     //key : value
-    Firstname : 'shubham',
-    lastname : 'pk',
-    address : 'pune',
-    mobilenumber : 489688899
+    Firstname: 'shubham',
+    lastname: 'pk',
+    address: 'pune',
+    mobilenumber: 489688899
   }]
-  
 
-  constructor(private commonFeat : CommonFeatureService,private http: HttpClient) { }
+  headers = new HttpHeaders()
+    .set('Authorization', 'token')
+    .set('content-type', 'application/json')
+
+  constructor(private commonFeat: CommonFeatureService, private http: HttpClient) { }
 
 
-  getName(){
+  getName() {
     return 'Ryan';
   }
 
-  getStudentDetails(){
+  getStudentDetails() {
     return this.studentDetails;
   }
 
-  getFlightDetails(){
-    return this.http.get('http://localhost:3000/packages/1')
+  getFlightDetails() {
+    return this.http.delete('http://localhost:3000/packages/13', { 'headers': this.headers })
   }
 
-  saveflight(obj :any){
-   return this.http.post('http://localhost:3000/packages',obj)
+  saveflight(obj: any) {
+    return this.http.post('http://localhost:3000/packages', obj)
   }
 
-  editflightrecords(id:any,body:any){
-    return this.http.put('http://localhost:3000/packages/'+id,body)
+  editflightrecords(id: any, body: any) {
+    return this.http.put('http://localhost:3000/packages/' + id, body)
   }
 }
