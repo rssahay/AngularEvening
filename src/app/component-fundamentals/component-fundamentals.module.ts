@@ -19,6 +19,8 @@ import { ReactiveProgramComponent } from './reactive-program/reactive-program.co
 import { RxjsExampleComponent } from './rxjs-example/rxjs-example.component';
 import { RxjsSubjectsExampleComponent } from './rxjs-subjects-example/rxjs-subjects-example.component';
 import { UserHttpExampleComponent } from './user-http-example/user-http-example.component';
+import { SquarePipe } from '../Pipes/square.pipe';
+import { ReverseStringPipe } from '../Pipes/reverse-string.pipe';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { UserHttpExampleComponent } from './user-http-example/user-http-example.
     ReactiveProgramComponent,
     RxjsExampleComponent,
     RxjsSubjectsExampleComponent,
-    UserHttpExampleComponent
+    UserHttpExampleComponent,
+    SquarePipe,
+    ReverseStringPipe
   ],
   imports: [
     CommonModule,

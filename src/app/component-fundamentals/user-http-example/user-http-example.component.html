@@ -29,3 +29,32 @@
     <button (click)="SubmitUserRecords()" [disabled]="disableSubmit">Submit</button>
     <button (click)="updateUserRecords()">Update</button>
 </div>
+
+
+<div>
+    Pipes check {{numbercheck | square}}
+
+    Alhabet Pipe {{CourseName | lowercase | uppercase}}
+</div>
+<div>
+Currency pipe  {{numbercheck | currency:'EUR'}}
+</div>
+<div>
+    date pipe {{today | date}}
+</div>
+
+<div>
+    decimal Pipe {{decimalNumber | number:'1.0-0' }}
+</div>
+
+<div>
+    Custom pipe {{CourseName | reverseString }}
+</div>
+
+<input type="text" [(ngModel)]="collage">
+
+output {{collage}}
+
+<label>name</label>
+<input name="fname" ngModel>
+

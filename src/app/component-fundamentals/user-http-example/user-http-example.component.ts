@@ -12,6 +12,13 @@ export class UserHttpExampleComponent implements OnInit {
   userCredentials :any;
   edituserRecords :any
   disableSubmit :boolean = false;
+  numbercheck= 50;
+  decimalNumber = 4.70035
+  CourseName = 'ANguLaRDevelopment'
+  name : string=''
+  collage :string='nit'
+
+  today = new Date("2022-08-10");
   constructor(private _userservice: UserService) { }
 
   userForm = new FormGroup({

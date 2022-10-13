@@ -17,7 +17,9 @@ export class UserService {
   }
 
   saveuserInfo(obj :any){
-    return this._http.post('http://localhost:3000/users',obj,{'headers':this.headers})
+    let Insideheaders = new HttpHeaders().set('Authorization','qqwwdafafeertgdf22dcc')
+    .set('content-type','application/json')
+    return this._http.post('http://localhost:3000/users',obj,{'headers': Insideheaders})
   }
 
   edituserInfo(id:any, obj:any){
@@ -26,6 +28,6 @@ export class UserService {
 
   deleteUserInfo(id :any)
   {
-    return this._http.delete('http://localhost:3000/users/'+id,{'headers':this.headers})
+    return this._http.delete('http://localhost:3000/users/'+id)
   }
 }

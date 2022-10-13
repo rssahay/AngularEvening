@@ -19,7 +19,12 @@ import { GirlsSectionComponent } from './girls-section/girls-section.component';
 import { MenFootwearComponent } from './men-footwear/men-footwear.component';
 import { MenwatchComponent } from './menwatch/menwatch.component';
 import { AdminModule } from './admin/admin.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SquarePipe } from './Pipes/square.pipe';
+import { appHttpInterceptors } from './Interceptors/appInterceptors';
+import { appHttp } from './Interceptors/appHttpInterceptor';
+import { RequestCheck } from './Interceptors/requestCheck';
+import { ReverseStringPipe } from './Pipes/reverse-string.pipe';
 
 
 
@@ -37,6 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     GirlsSectionComponent,
     MenFootwearComponent,
     MenwatchComponent,
+  //  ReverseStringPipe,
+  //  SquarePipe,
     
    // CustomHighlighterDirective
   ],
@@ -50,7 +57,16 @@ import { HttpClientModule } from '@angular/common/http';
     AdminModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+    provide: HTTP_INTERCEPTORS, useClass: appHttpInterceptors, multi:true
+  },
+  {
+    provide: HTTP_INTERCEPTORS, useClass: appHttp, multi:true
+  },{
+    provide: HTTP_INTERCEPTORS, useClass:RequestCheck, multi:true
+  }
+  ],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
